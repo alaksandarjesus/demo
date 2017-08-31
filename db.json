@@ -1,14 +1,225 @@
-{
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+{"expressions":{
+  "success": true,
+  "action": "Get all expression",
+  "all_expressions": [
+    {
+      "expression_id": 10948,
+      "name": "nested1",
+      "expression": "otest*(a+b)-updated",
+      "description": "nested1",
+      "input_field_definition": "[otest],[a],[b],[updated",
+      "output_field_definition": "result"
+    },
+    {
+      "expression_id": 1,
+      "name": "End of Period Quantity",
+      "expression": "\"{1 : End of Period Quantity}\"",
+      "description": "\"Beginning of Period Quantity\" + \"New Quantity\" - \"Deactivations\""
+    },
+    {
+      "expression_id": 2,
+      "name": "List Price",
+      "expression": "\"{2 : List Price}\"",
+      "description": "\"{1 : End of Period Quantity}\" * \"Per Unit List Price\""
+    },
+    {
+      "expression_id": 3,
+      "name": "Adjustment",
+      "expression": "\"{3 : Adjustment}\"",
+      "description": "\"{2 : List Price}\" * \"Adjustment Percentage\""
+    },
+    {
+      "expression_id": 4,
+      "name": "Adjusted List Price",
+      "expression": "\"{4 : Adjusted List Price}\"",
+      "description": "\"{2 : List Price}\" + \"{3 : Adjustment}\""
+    },
+    {
+      "expression_id": 5,
+      "name": "MFN/E-Rate Adjustment",
+      "expression": "\"{5 : MFN/E-Rate Adjustment}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 6,
+      "name": "Total Rate Impacting Promotion Discount",
+      "expression": "\"{6 : Total Rate Impacting Promotion Discount}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 7,
+      "name": "Total Rate Impacting Credit",
+      "expression": "\"{7 : Total Rate Impacting Credit}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 8,
+      "name": "Total Rate Impacting Volume Discount",
+      "expression": "\"{8 : Total Rate Impacting Volume Discount}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 9,
+      "name": "Rate Impacting Discretionary Discount",
+      "expression": "\"{9 : Rate Impacting Discretionary Discount}\"",
+      "description": "-1 * \"Rate Impacting Discretionary Discount Percentage\" * \"{2 : List Price}\""
+    },
+    {
+      "expression_id": 10,
+      "name": "Effective Rate",
+      "expression": "\"{10 : Effective Rate}\"",
+      "description": "\"{4 : Adjusted List Price}\" + \"{5 : MFN/E-Rate Adjustment}\" + \"{6 :Total Rate Impacting Promotion Discount}\" + \"{7 : Total Rate Impacting Credit}\" + \"{8 : Total Rate Impacting Volume Discount}\" + \"{9 : Rate Impacting Discretionary Discount}\""
+    },
+    {
+      "expression_id": 11,
+      "name": "Total Non Rate Impacting Credit",
+      "expression": "\"{11 : Total Non Rate Impacting Credit}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 12,
+      "name": "Non Rate Impacting Discretionary Discount",
+      "expression": "\"{12 : Non Rate Impacting Discretionary Discount}\"",
+      "description": "\"Non Rate Impacting Discretionary Discount\""
+    },
+    {
+      "expression_id": 13,
+      "name": "Effective Charge",
+      "expression": "\"{13 : Effective Charge}\"",
+      "description": "\"Charge\" - \"{11 : Total Non Rate Impacting Credit}\" - \"{12 : Non Rate Impacting Discretionary Discount}\""
+    },
+    {
+      "expression_id": 14,
+      "name": "Net Effective Rate",
+      "expression": "\"{14 : Net Effective Rate}\"",
+      "description": "\"{10 : Effective Rate}\" + \"{13 : Effective Charge}\""
+    },
+    {
+      "expression_id": 15,
+      "name": "Invoice Price",
+      "expression": "\"{15 : Invoice Price}\"",
+      "description": "\"{14 : Net Effective Rate}\" + \"Discretionary Sales Adder\""
+    },
+    {
+      "expression_id": 16,
+      "name": "Revenue Adjustment",
+      "expression": "\"{16 : Revenue Adjustment}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 17,
+      "name": "Total Rebate Credit",
+      "expression": "\"{17 : Total Rebate Credit}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 18,
+      "name": "Payment Terms",
+      "expression": "\"{18 : Payment Terms}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 19,
+      "name": "Pocket Price",
+      "expression": "\"{19 : Pocket Price}\"",
+      "description": "\"{15 : Net Effective Rate}\" + \"{16 : Revenue Adjustment}\" + \"{17 : Total Rebate Credit}\" + \"{18 : Payment Terms}\""
+    },
+    {
+      "expression_id": 20,
+      "name": "Non Recurring Costs",
+      "expression": "\"{20 : Non Recurring Costs}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 21,
+      "name": "Recurring Costs",
+      "expression": "\"{21 : Recurring Costs}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 22,
+      "name": "Pocket Margin",
+      "expression": "\"{22 : Pocket Margin}\"",
+      "description": "\"{19 : Pocket Price}\" + \"{20 : Non Recurring Costs}\" + \"{21 : Recurring Costs}\""
+    },
+    {
+      "expression_id": 10949,
+      "name": "mounika",
+      "expression": "{a+b+c}",
+      "description": "adding",
+      "input_field_definition": "[a],b],c]",
+      "output_field_definition": "result"
+    },
+    {
+      "expression_id": 10950,
+      "name": "Tharun",
+      "expression": "{a+b+c}",
+      "description": "adding",
+      "input_field_definition": "[a],b],c]",
+      "output_field_definition": "result"
+    },
+    {
+      "expression_id": 23,
+      "name": "SG&A",
+      "expression": "\"{23 : SG&A}\"",
+      "description": "0"
+    },
+    {
+      "expression_id": 10940,
+      "name": "test",
+      "expression": "a+b",
+      "description": "test",
+      "input_field_definition": "[a],b]",
+      "output_field_definition": "result"
+    },
+    {
+      "expression_id": 10941,
+      "name": "test3",
+      "expression": "a+b+c",
+      "description": "test3",
+      "input_field_definition": "[a],b],c]",
+      "output_field_definition": "result"
+    },
+    {
+      "expression_id": 10942,
+      "name": "testU4",
+      "expression": "y*z",
+      "description": "testU4",
+      "input_field_definition": "[y],z]",
+      "output_field_definition": "result"
+    },
+    {
+      "expression_id": 10945,
+      "name": "oatest",
+      "expression": "a*o+(e-d)",
+      "description": "oatest",
+      "input_field_definition": "[a],o],e],d]",
+      "output_field_definition": "result"
+    },
+    {
+      "expression_id": 10943,
+      "name": "updated",
+      "expression": "f*4+n1",
+      "description": "updated",
+      "input_field_definition": "[f],[n1",
+      "output_field_definition": "result"
+    },
+    {
+      "expression_id": 10944,
+      "name": "otest",
+      "expression": "o*r+t",
+      "description": "otest",
+      "input_field_definition": "[o],r],t]",
+      "output_field_definition": "result"
+    },
+    {
+      "expression_id": 10947,
+      "name": "n1",
+      "expression": "p/t",
+      "description": "n1",
+      "input_field_definition": "[p],[t",
+      "output_field_definition": "result"
+    }
+  ]
+}
 }
